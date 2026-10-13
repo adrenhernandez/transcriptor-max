@@ -60,7 +60,8 @@
     margin-top: 16px; padding: 18px; border: 1px solid var(--border);
     border-radius: 12px; background: var(--surface); display: grid; gap: 12px;
   }
-  #settings label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+  #settings h3 { margin: 0; font-size: 16px; font-weight: 600; }
+  #settings label { display: grid; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text); }
   #settings p { margin: 0; font-size: 13px; color: var(--muted); }
   #settings a { color: inherit; }
 
@@ -119,11 +120,12 @@
   </form>
 
   <section id="settings" hidden>
-    <label>Repositorio (usuario/nombre)
+    <h3>Configuración</h3>
+    <label>1. Repositorio
       <input id="repo" placeholder="usuario/transcriptor-max">
     </label>
-    <label>Token de GitHub
-      <input id="token" type="password" placeholder="github_pat_…">
+    <label>2. Token de GitHub
+      <input id="token" type="password" placeholder="Pega aquí tu token (empieza con github_pat_)">
     </label>
     <p>Token <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained</a> solo para este repo, con permisos <b>Actions: read &amp; write</b> y <b>Contents: read</b>. Se guarda únicamente en este navegador.</p>
     <div><button class="primary" id="save" type="button">Guardar</button></div>
